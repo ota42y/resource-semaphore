@@ -12,7 +12,7 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	c := semaphore.NewResourceSemaphore(100)
+	c := semaphore.NewResourceSemaphore(10)
 	wg := &sync.WaitGroup{}
 	for i := 1; i < 100; i++ {
 		wg.Add(1)
